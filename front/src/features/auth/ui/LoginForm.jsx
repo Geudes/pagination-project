@@ -33,17 +33,17 @@ function LoginForm() {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit(log2)}>
+        <div className='auth'>
+            <form className='auth-form' onSubmit={handleSubmit(log2)}>
                 <label>
                     email
-                    {errors.email && <span>{errors.email?.message}</span>}
-                    <input type="email" {...register('email')}/>
+                    {errors.email && <span className='error-message'>{errors.email?.message}</span>}
+                    <input className={errors.email ? 'error-input' : ''} type="email" {...register('email')}/>
                 </label>
                 <label>
                     password
-                    {errors.password && <span>{errors.password?.message}</span>}
-                    <input type="password" {...register('password')}/>
+                    {errors.password && <span className='error-message'>{errors.password?.message}</span>}
+                    <input className={errors.email ? 'error-input' : ''} type="password" {...register('password')}/>
                 </label>
                 <button>Login</button>
             </form>

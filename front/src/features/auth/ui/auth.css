@@ -1,0 +1,92 @@
+
+.auth {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: left;
+}
+
+.auth h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  color: #111;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+
+.auth-form {
+  max-width: 400px; 
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #999; 
+  transition: color 0.3s ease;
+}
+
+.auth-form label:focus-within {
+  color: #ffffff; 
+}
+
+
+.auth-form input {
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 8px 0;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.auth-form input:focus {
+  border-bottom-color: #000000; 
+}
+
+/* ПОДСВЕТКА ОШИБКИ */
+.auth-form input.error-input {
+  border-bottom-color: #eb4d4b;
+}
+
+.auth-form .error-message {
+  color: #eb4d4b;
+  font-size: 0.7rem;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 4px;
+}
+
+
+.auth-form button {
+  align-self: flex-start; 
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.auth-form button:hover {
+  background: transparent;
+  color: #111;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}

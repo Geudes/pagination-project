@@ -1,9 +1,10 @@
 import React from 'react'
+import "./loader.css"
 
-function loader() {
+function Loader() {
   return (
-    <div>loader</div>
+    <div className='loader'></div>
   )
 }
 
-export default loader
+export default Loader
