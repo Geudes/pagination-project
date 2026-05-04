@@ -1,8 +1,9 @@
 import React from 'react'
+import RegisterForm from '../features/auth/ui/RegisterForm'
 
 function RegisterPage() {
   return (
-    <div>RegisterPage</div>
+    <div><RegisterForm /></div>
   )
 }
 
