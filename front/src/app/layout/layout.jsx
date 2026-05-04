@@ -1,6 +1,4 @@
-import { useContext } from 'react'
 import { NavLink, Outlet } from 'react-router'
-import authStorage from '../../features/auth/models/auth-storage'
 import "./layout.css"
 
 function Layout() {
