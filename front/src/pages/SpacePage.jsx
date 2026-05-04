@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import Spaces from '../features/spaces/ui/spaces/spaces'
+
+
 
 function SpacePage() {
+
   return (
-    <div>SpacePage</div>
+    <div>
+     <Spaces />
+    </div>
   )
 }
 
