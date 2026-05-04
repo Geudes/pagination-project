@@ -1,7 +1,10 @@
 import axios from 'axios'
 import authStorage from '../../features/auth/models/auth-storage'
+
+const baseURL = import.meta.env.VITE_BASE_URL || 'http://localhost:3010'
+
 const AxiosInstance = axios.create({
-    baseURL:import.meta.env.VITE_BASE_URL || 'http://localhost:3010',
+    baseURL,
     headers:{
         'Content-Type':'application/json'
     }
@@ -34,7 +37,7 @@ AxiosInstance.interceptors.response.use(
                 authStorage.clear()
                 throw error
             }
-            const {data} = await axios.post('http://localhost:3010/auth/refresh', {refresh})
+            const {data} = await axios.post(baseURL + '/auth/refresh', {refresh})
             if(data?.accessToken){
                 authStorage.setAccess(data.accessToken)
                 AxiosInstance.defaults.headers.Authorization = `Bearer ${data.accessToken}`
