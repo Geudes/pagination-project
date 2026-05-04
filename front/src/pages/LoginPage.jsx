@@ -1,8 +1,9 @@
 import React from 'react'
+import LoginForm from '../features/auth/ui/LoginForm'
 
 function LoginPage() {
   return (
-    <div>LoginPage</div>
+    <div><LoginForm /></div>
   )
 }
 

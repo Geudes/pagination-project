@@ -1,8 +1,9 @@
 import React from 'react'
+import Loader from '../widgets/loader/loader'
 
 function BookingPage() {
   return (
-    <div>BookingPage</div>
+    <div><Loader /></div>
   )
 }
 
